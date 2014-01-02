@@ -190,6 +190,11 @@ endif
 OSE_VERSION := OSE-$(PRODUCT_VERSION_MAJOR)-$(OSE_BUILD_TYPE)-$(shell date +%m%d%Y-%H%M)
 OSE_MOD_VERSION := OSE-$(OSE_BUILD)-$(PRODUCT_VERSION_MAJOR)-$(OSE_BUILD_TYPE)-$(shell date +%m%d%Y-%H%M)
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+    vendor/ose/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+    vendor/ose/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ose.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \

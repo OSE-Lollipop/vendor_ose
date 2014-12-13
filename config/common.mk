@@ -24,6 +24,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
 
+# Prebuilt Apks
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/app/Nova.apk:system/app/Nova.apk
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
@@ -43,6 +47,10 @@ PRODUCT_COPY_FILES += \
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
+# Copy libgif for Nova Launcher 3.0
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/lib/libgif.so:system/lib/libgif.so
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \

@@ -1,2 +1,7 @@
+add_lunch_combo ose_flo-userdebug
+add_lunch_combo ose_ls980-userdebug
 add_lunch_combo ose_vs980-userdebug
 add_lunch_combo ose_d800-userdebug
+add_lunch_combo ose_d801-userdebug
+add_lunch_combo ose_d802-userdebug
+add_lunch_combo ose_d803-userdebug

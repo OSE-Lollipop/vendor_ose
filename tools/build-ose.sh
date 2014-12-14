@@ -212,7 +212,7 @@ fi
 echo -e ""
 
 # squisher
-vendor/ose/tools/squisher
+#vendor/ose/tools/squisher
 
 # cleanup unused built
 rm -f $OUTDIR/target/product/$device/ose_*-ota*.zip

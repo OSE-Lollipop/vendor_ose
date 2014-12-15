@@ -223,4 +223,4 @@ t2=$($DATE +%s)
 tmin=$(( (t2-t1)/60 ))
 tsec=$(( (t2-t1)%60 ))
 
-echo -e ${bldred}"Total time elapsed:${txtrst} ${grn}$tmin minutes $tsec seconds"${txtrst}
+#echo -e ${bldred}"Total time elapsed:${txtrst} ${grn}$tmin minutes $tsec seconds"${txtrst}

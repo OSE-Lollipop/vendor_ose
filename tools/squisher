@@ -19,7 +19,7 @@ else
 fi
 
 if [ -z "$OUT" -o ! -d "$OUT" ]; then
-    echo "ERROR: $0 only works with a full build environment. $OUT should exist."
+    echo ${bldred}"ERROR: $0 only works with a full build environment. $OUT should exist."${txtrst}
     exit 1
 fi
 
@@ -47,7 +47,7 @@ DELETE_GALLERY="Gallery2.apk"
 DELETE_FONTS="MTLmr3m.ttf"
 
 REPACK=$OUT/repack.d
-printf "Sanitizing environment..."
+printf ${bldgrn}"Sanitizing environment..."${txtrst}
 rm -rf $REPACK
 mkdir -p $REPACK
 echo
@@ -57,7 +57,7 @@ echo
 mkdir $REPACK/ota
 (
 cd $REPACK/ota
-printf "Unpacking $OTAPACKAGE..."
+printf ${bldgrn}"Unpacking $OTAPACKAGE..."${txtrst}
 unzip $QUIET $OTAPACKAGE
 echo
 
@@ -189,17 +189,17 @@ OUTFILE=$OUT/$MODVERSION.zip
 echo MODVERSION: $MODVERSION
 
 # Pack it up and sign
-printf "Zipping package..."
+printf ${bldgrn}"Zipping package..."${txtrst}
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
 echo
-printf "Signing package..."
+printf ${bldgrn}"Signing package..."${txtrst}
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
 	-jar $OUT/../../../host/$OUT_TARGET_HOST/framework/signapk.jar \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
 echo
-printf "Cleaning up..."
+printf ${bldgrn}"Cleaning up..."${txtrst}
 rm -rf $REPACK
 echo
 
@@ -209,7 +209,7 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 echo
-echo "Package complete: $OUTFILE"
+echo ${bldppl}"Package complete: $OUTFILE"${txtrst}
 cat $img.md5sum
 echo
 )

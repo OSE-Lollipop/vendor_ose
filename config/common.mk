@@ -32,7 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Prebuilt Apks
 PRODUCT_COPY_FILES += \
-    vendor/ose/prebuilt/common/app/Nova.apk:system/app/Nova.apk
+    vendor/ose/prebuilt/common/app/ESFile.apk:system/app/ESFile.apk
 
 # Backup Tool
 PRODUCT_COPY_FILES += \

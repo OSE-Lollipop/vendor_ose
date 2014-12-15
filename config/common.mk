@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimCenter \
-    SlimLauncher \
+    OSELauncher \
     LatinIME \
     BluetoothExt \
     DashClock

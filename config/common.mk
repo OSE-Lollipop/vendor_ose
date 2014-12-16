@@ -101,7 +101,6 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimCenter \
     OSELauncher \
     LatinIME \
     BluetoothExt \

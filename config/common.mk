@@ -93,11 +93,9 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam
 
-# DSPManager
+# AudioFX
 PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf
+    AudioFX
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
@@ -115,6 +113,15 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat
+
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+# Stagefright FFMPEG plugin
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec \
+    libstagefright_soft_ffmpegvdec \
+    libFFmpegExtractor \
+    libnamparser
+endif
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk

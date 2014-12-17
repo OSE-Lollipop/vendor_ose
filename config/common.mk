@@ -30,6 +30,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
 
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
+
 # Prebuilt Apks
 PRODUCT_COPY_FILES += \
     vendor/ose/prebuilt/common/app/ESFile.apk:system/app/ESFile.apk

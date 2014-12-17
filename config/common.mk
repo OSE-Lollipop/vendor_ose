@@ -104,8 +104,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     DashClock
 
-#    SlimFileManager removed until updated
-
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
@@ -174,16 +172,6 @@ ifndef OSE_BUILD_TYPE
     OSE_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
     OSE_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-endif
-
-# SlimIRC
-# export INCLUDE_SLIMIRC=1 for unofficial builds
-ifneq ($(filter WEEKLY OFFICIAL,$(OSE_BUILD_TYPE)),)
-    INCLUDE_SLIMIRC = 1
-endif
-
-ifneq ($(INCLUDE_SLIMIRC),)
-    PRODUCT_PACKAGES += SlimIRC
 endif
 
 # Set all versions

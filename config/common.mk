@@ -99,10 +99,11 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    OSELauncher \
-    LatinIME \
     BluetoothExt \
-    DashClock
+    DashClock \
+    LatinIME \
+    LockClock \
+    OSELauncher
 
 # Extra tools
 PRODUCT_PACKAGES += \

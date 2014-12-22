@@ -25,5 +25,12 @@
 
     <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
     <bool name="config_show4GForLTE">false</bool>
+
+    <!-- The number of app thumbnails we keep in memory -->
+    <integer name="config_recents_max_thumbnail_count">8</integer>
+
+    <!-- The number of app icons we keep in memory -->
+    <integer name="config_recents_max_icon_count">15</integer>
+
 </resources>
 

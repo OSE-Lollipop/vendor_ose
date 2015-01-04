@@ -107,7 +107,6 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
-    Superuser \
     su
 
 # Optional packages
@@ -145,6 +144,7 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
+
 endif
 
 # easy way to extend to add more packages

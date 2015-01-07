@@ -107,7 +107,6 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
-    SpareParts \
     Superuser \
     su
 

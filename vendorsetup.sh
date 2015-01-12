@@ -8,4 +8,3 @@ add_lunch_combo ose_d801-userdebug
 add_lunch_combo ose_d802-userdebug
 add_lunch_combo ose_d803-userdebug
 add_lunch_combo ose_d850-userdebug
-

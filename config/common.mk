@@ -107,6 +107,7 @@ SUPERUSER_EMBEDDED := true
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
+    SpareParts \
     su
 
 # Optional packages
